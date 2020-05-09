@@ -52,8 +52,8 @@ public class Main {
                     }
                     System.out.println("Please enter weight of backpack");
                     SixthTask sixthTask = new SixthTask(input.nextDouble());
-                    sixthTask.MakeAllSets(items);
-                    sixthTask.GetBestSet().forEach(System.out::println);
+                    sixthTask.makeAllSets(items);
+                    sixthTask.getBestSet().forEach(System.out::println);
             }
         } catch (Exception e) {
             System.out.println("Error enter, try again");
