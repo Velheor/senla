@@ -2,9 +2,9 @@ package com.company;
 
 public class FifthTask {
     public static boolean isPalindrome(int number) {
-        if (number == 0) {
+        if (number < 10) {
             return false;
         }
-        return number % 11 == 0;
+        return Integer.toString(number).equals(new StringBuilder().append(number).reverse().toString());
     }
 }

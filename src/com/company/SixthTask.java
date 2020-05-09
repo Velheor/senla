@@ -15,8 +15,7 @@ public class SixthTask {
 
     private double calculateWeight(List<Item> items) {
         double sumWeight = 0;
-        for (Item item :
-                items) {
+        for (Item item : items) {
             sumWeight += item.getWeight();
         }
 
@@ -34,7 +33,16 @@ public class SixthTask {
     }
 
     private void checkSet(List<Item> items) {
-        if (backpack.getBestItems() == null || ((calculateWeight(items) <= backpack.getMaxWeight() && calculatePrice(items) > backpack.getMaxPrice()))) {
+        if (backpack.getBestItems() == null)
+        {
+            if (calculateWeight(items) <= backpack.getMaxWeight())
+            {
+                backpack.setBestItems(items);
+                backpack.setMaxPrice(calculatePrice(items));
+                return;
+            }
+        }
+        if ((calculateWeight(items) <= backpack.getMaxWeight() && calculatePrice(items) > backpack.getMaxPrice())) {
             backpack.setBestItems(items);
             backpack.setMaxPrice(calculatePrice(items));
         }
