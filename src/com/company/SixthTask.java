@@ -48,7 +48,7 @@ public class SixthTask {
         }
     }
 
-    public void MakeAllSets(List<Item> items) {
+    public void makeAllSets(List<Item> items) {
         if (items.size() > 0)
             checkSet(items);
 
@@ -57,11 +57,11 @@ public class SixthTask {
 
             newSet.remove(i);
 
-            MakeAllSets(newSet);
+            makeAllSets(newSet);
         }
     }
 
-    public List<Item> GetBestSet() {
+    public List<Item> getBestSet() {
         return backpack.getBestItems();
     }
 }
